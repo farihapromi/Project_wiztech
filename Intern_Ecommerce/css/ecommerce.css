@@ -107,98 +107,10 @@
     justify-content: center;
     gap: 20px;
 }
-/* .products{
-    display:grid;
-    justify-content: center;
-    
-    grid-template-columns: repeat(3,1fr);
-    grid-row-gap:30px;
-    grid-column-gap:10px;
-  
-    padding-left:25px;
-    padding-right:10px;
-    margin-top:20px;
-    margin-right: 30px;
-   
 
-} */
-/* .product{
-    
-
-      
-    width:350px;
-    height:350px;
-    margin-left:20px;
-    margin-right:5%;
-    padding-left:10px;
-    padding-right:20px;
-    text-align:center;
-    
-  
-   
-    padding-top:0;
-     background: #FFFFFF;
-      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    
-    } */
-    
-
-/* 
-.product-name{
-    margin-left:16px;
-    font-size:18px;
-
-}
-
-
-.my-product{
-    padding-left:5px;
-    padding-right:5px;
-    
-} */
-
-
-
-
-/* .product img{
-    width: 67.33%;
-    height:200px;
-    
-   margin-top: 20px;
-   margin-bottom: 5px;
-   margin-right: 5px;
-   margin-left: 12px;
-   
-    border-radius: 15px;
-}
-.product-description{
-    padding-left:5px;
-    padding-right:5px;
-    
-} */
-/* .img{
-    height: 200px;
-    width:62px;
-    margin-top: 10px;
-}
-.button{
-    height:30px;
-    width:130px;
-    border-radius:42px;
-    float:right;
-    margin-top: 10px;
-    
-} */
 .col-logo button{
     float:right;
 }
-/* .button-hr {
-    height:30px;
-    width:130px;
-    border-radius:42px;
-    float: right;
-    margin-top: 20px;
-} */
 
 .top_right_section {
     text-align:right;
@@ -242,7 +154,7 @@
 
 .background{
   
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VgUUSP3ccLw-KGlDetOItoQuXUdx6jJeMQ&usqp=CAU'); */
+  
      background-image:url('../image/img4.png');
     margin-left:20px;
     padding:20px;
@@ -257,12 +169,11 @@
 
 /* card er button */
 .button-add{
-  /* float:right; */
+
  background-color:#FFBFCD;
     width: 88px;
    height: 36px;
-  /* top: 757px;
-   left: 530px;  */
+
    border-radius: 20px;
    border:none;
    text-align: center;
@@ -270,17 +181,12 @@
   color: hsl(347, 83%, 63%);
 
 }
-/* .vertical{
-    height: 300px;
-    border-right: 1px solid #000900;
-  
-    right: 50%;
-} */
+
 .button-box{
     width:110px;
     height:36px;
    background-color:whitesmoke;
-   /* border:none; */
+ 
    border-radius: 5px;
    border-style:solid;
    border-color:#e66480;
@@ -625,7 +531,7 @@ input[type="radio"] {
     font-size:35px;
 }
   
-  /* Define the custom style for the radio button when checked */
+  /*  custom style for the radio button when checked */
   input[type="radio"]:checked {
     background-color:#EF3C8B;
   }
@@ -639,7 +545,7 @@ input[type="radio"] {
     background-color: #eee;
     border-radius: 50%;
   }
-  /* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
     content: "";
     position: absolute;
@@ -676,7 +582,114 @@ input[type="radio"] {
   
 
 
-/* CSS code for devices with a max-width of 768px (e.g., tablets) */
+
+.side-category{
+    background: #F5CCDC;
+    width:220px;
+    height:44px;
+    text-align: left;
+    padding-top:8px;
+    padding-left:8px;
+    color:#471D6B;
+}
+
+.header_bottom_section {
+    position: relative;
+ 
+}
+
+/* Add styles for the sidebar */
+.sidebar-custom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: none; /* Hide the submenu by default */
+}
+
+/* Style the header of the sidebar */
+.sidebar-custom header {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the sidebar links */
+.sidebar-custom ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-custom ul li {
+    padding: 5px 10px;
+}
+
+.sidebar-custom ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Add styles for the active link */
+.sidebar-custom ul li a.active {
+    background-color: #ddd;
+}
+
+
+/* Add styles for the submenu */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.submenu li {
+    padding: 10px;
+    list-style: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style the dropdown and drop-up icon */
+.submenu-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #666;
+    margin-left: 5px;
+    transform: rotate(180deg);
+}
+
+.has-submenu.open .submenu {
+    display: block;
+}
+
+.has-submenu.open .submenu-icon {
+    transform: rotate(0deg);
+}
+
+/* for responsive
+ */
+
+ 
 @media only screen and (max-width: 768px) {
     .products {
         grid-template-columns: repeat(2, 1fr);
@@ -696,11 +709,10 @@ input[type="radio"] {
     }
 
     .sidebar {
-        flex-basis: 180px;
+        flex-basis: 80px;
     }
 }
 
-/* CSS code for devices with a max-width of 480px (e.g., smartphones) */
 @media only screen and (max-width: 480px) {
     .products {
         grid-template-columns: repeat(1, 1fr);

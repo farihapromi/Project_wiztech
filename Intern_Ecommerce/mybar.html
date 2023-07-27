@@ -9,6 +9,7 @@
      />
      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="css/ecommerce.css">
+   
  
    
     
@@ -26,7 +27,43 @@
     <title>Document</title>
  
 
-  
+<!-- Add jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Toggle sidebar on click
+    $('.header_bottom_section').on('click', function() {
+        $('.sidebar-custom').slideToggle();
+    });
+
+    // Hide the sidebar when clicking outside of it
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.header_bottom_section').length) {
+            $('.sidebar-custom').slideUp();
+        }
+    });
+});
+
+$(document).ready(function() {
+    // Toggle submenu on click
+    $('.has-submenu > a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    // Hide the sidebar when clicking outside of it
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.header_bottom_section').length) {
+            $('.sidebar-custom').removeClass('expanded');
+        }
+    });
+});
+</script>
+
+
+
+
     
 </head>
 <body>
@@ -89,8 +126,32 @@
     <div class="row">
         <div class="col-md-3">
            
-           <p>Sidebar</p>
-
+           <p class="side-category"> ☰ Category</p>
+<!-- sidebar start -->
+<div class="sidebar-custom collapsed">
+    <header>Dashboard</header>
+    <ul>
+        <li><a href="#">Dashboard</a></li>
+        
+        <li><a href="#">Health and beauty</a></li>
+        <li class="has-submenu">
+            <a href="#">
+                Electronics
+                <span class="submenu-icon"></span>
+            </a>
+            <ul class="submenu">
+                <li><a href="#">Skin</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Bath and Body</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Health and beauty </a></li>
+        <li><a href="#"> Electronics</a></li>
+        <li><a href="#">Beuty Tips</a></li>
+        <li><a href="#">Skincare</a></li>
+      
+    </ul>
+</div>
         
            <!-- sidebar ends -->
             
